@@ -250,7 +250,7 @@ class ObjectSerializer
         } elseif ($class === 'object') {
             settype($data, 'array');
             return $data;
-        } elseif ($class === '\DateTime') {
+        } elseif ( $class === '\DateTime' || $class === '\GoDaddyDomainsClient\Model\Datetime' ) {
             // Some API's return an invalid, empty string as a
             // date-time property. DateTime::__construct() will return
             // the current time for empty input which is probably not
